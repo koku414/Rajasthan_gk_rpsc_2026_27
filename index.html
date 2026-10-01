@@ -8,186 +8,155 @@
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-  background:#f4f7fb;
-  color:#222;
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
 }
 
 header{
-  background:linear-gradient(135deg,#172554,#2563eb);
-  color:white;
-  padding:28px 18px;
-  text-align:center;
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+    color:white;
+    padding:30px 15px;
+    text-align:center;
 }
 
 header h1{
-  font-size:28px;
-  margin-bottom:8px;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 header p{
-  font-size:15px;
-  opacity:.95;
+    font-size:16px;
 }
 
 nav{
-  background:white;
-  padding:12px;
-  text-align:center;
-  box-shadow:0 2px 8px #0002;
-  position:sticky;
-  top:0;
-  z-index:10;
+    background:#222;
+    padding:12px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
 nav a{
-  text-decoration:none;
-  color:#1e3a8a;
-  font-weight:bold;
-  margin:5px 8px;
-  display:inline-block;
-}
-
-.hero{
-  max-width:1000px;
-  margin:22px auto;
-  padding:25px 18px;
-  text-align:center;
-}
-
-.hero h2{
-  color:#172554;
-  font-size:25px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  color:#555;
-  line-height:1.7;
-}
-
-.search{
-  max-width:700px;
-  margin:10px auto 25px;
-  padding:0 15px;
-}
-
-.search input{
-  width:100%;
-  padding:15px;
-  border:1px solid #ccd5e1;
-  border-radius:12px;
-  font-size:16px;
-  outline:none;
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
 }
 
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:0 15px 40px;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:16px;
+.search-box{
+    margin:20px 0;
+    text-align:center;
 }
 
-.card{
-  background:white;
-  border-radius:16px;
-  padding:22px;
-  box-shadow:0 4px 15px #00000012;
-  border:1px solid #e5e7eb;
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 7px 20px #00000020;
-}
-
-.card .icon{
-  font-size:34px;
-  margin-bottom:10px;
-}
-
-.card h3{
-  color:#172554;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#666;
-  line-height:1.5;
-  font-size:14px;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:14px;
-  padding:10px 15px;
-  background:#2563eb;
-  color:white;
-  text-decoration:none;
-  border-radius:9px;
-  font-weight:bold;
-  font-size:14px;
+.search-box input{
+    width:100%;
+    max-width:600px;
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
 }
 
 .section-title{
-  text-align:center;
-  margin:35px 0 18px;
-  color:#172554;
+    margin:30px 0 15px;
+    font-size:25px;
+    color:#4a00e0;
+    border-left:5px solid #4a00e0;
+    padding-left:10px;
 }
 
-.latest{
-  background:white;
-  border-radius:16px;
-  padding:20px;
-  box-shadow:0 4px 15px #00000012;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
 }
 
-.latest-item{
-  padding:14px 5px;
-  border-bottom:1px solid #eee;
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.2s;
 }
 
-.latest-item:last-child{
-  border-bottom:none;
+.card:hover{
+    transform:translateY(-3px);
 }
 
-.latest-item strong{
-  color:#1d4ed8;
+.card h3{
+    margin-bottom:8px;
+    color:#333;
+}
+
+.card p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.pdf-btn{
+    display:inline-block;
+    background:#4a00e0;
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.pdf-btn:hover{
+    background:#8e2de2;
+}
+
+.subject{
+    border-top:4px solid #4a00e0;
+}
+
+.mcq{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom:15px;
+}
+
+.mcq h3{
+    margin-bottom:10px;
+}
+
+.answer{
+    color:#16803c;
+    font-weight:bold;
 }
 
 footer{
-  background:#172554;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:30px;
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
 }
 
-footer p{
-  margin:6px;
-  font-size:14px;
-}
-
-.badge{
-  display:inline-block;
-  background:#dbeafe;
-  color:#1e40af;
-  padding:7px 12px;
-  border-radius:20px;
-  font-size:13px;
-  margin-top:12px;
+.no-result{
+    display:none;
+    text-align:center;
+    padding:20px;
+    color:#777;
 }
 </style>
 </head>
@@ -195,230 +164,272 @@ footer p{
 <body>
 
 <header>
-  <h1>📚 Rajasthan GK</h1>
-  <p>RPSC / RAS Exam Trend 2026-27</p>
-  <span class="badge">Hindi Medium • Study Material • MCQ</span>
+    <h1>📚 Rajasthan GK</h1>
+    <p>RPSC Exam Trend 2026-27</p>
+    <p>राजस्थान एवं भारत सामान्य ज्ञान की तैयारी</p>
 </header>
 
 <nav>
-  <a href="#home">🏠 Home</a>
-  <a href="#subjects">📚 Subjects</a>
-  <a href="#current">📰 Current Affairs</a>
-  <a href="#notes">📖 Notes</a>
-  <a href="#mcq">📝 MCQ</a>
+    <a href="#home">होम</a>
+    <a href="#subjects">विषय</a>
+    <a href="#pdfs">PDF Notes</a>
+    <a href="#mcq">MCQ</a>
 </nav>
 
-<section class="hero" id="home">
-  <h2>RPSC Exam Trend 2026-27</h2>
-  <p>
-    राजस्थान, भारत एवं सामान्य ज्ञान की तैयारी के लिए
-    Notes, Current Affairs और MCQ एक ही जगह।
-  </p>
-</section>
+<div class="container" id="home">
 
-<div class="search">
-  <input
-    type="text"
-    id="searchBox"
-    placeholder="🔍 Topic खोजें... जैसे History, Economy, MCQ"
-    onkeyup="searchCards()"
-  >
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 विषय या PDF खोजें..."
+            onkeyup="searchContent()"
+        >
+    </div>
+
+    <h2 class="section-title" id="subjects">
+        📖 अध्ययन विषय
+    </h2>
+
+    <div class="grid">
+
+        <div class="card subject">
+            <h3>🏰 राजस्थान इतिहास</h3>
+            <p>राजस्थान की सभ्यताएँ, प्राचीन इतिहास एवं महत्वपूर्ण तथ्य।</p>
+        </div>
+
+        <div class="card subject">
+            <h3>🏛️ राजस्थान कला एवं संस्कृति</h3>
+            <p>लोक संस्कृति, परंपरा, स्थापत्य एवं सांस्कृतिक तथ्य।</p>
+        </div>
+
+        <div class="card subject">
+            <h3>🌊 राजस्थान भूगोल</h3>
+            <p>नदियाँ, झीलें, जल स्थापत्य, कृषि एवं प्राकृतिक संसाधन।</p>
+        </div>
+
+        <div class="card subject">
+            <h3>💰 राजस्थान अर्थव्यवस्था</h3>
+            <p>आर्थिक सर्वेक्षण एवं राजस्थान की अर्थव्यवस्था से संबंधित सामग्री।</p>
+        </div>
+
+        <div class="card subject">
+            <h3>🛕 राजस्थान पर्यटन</h3>
+            <p>प्रमुख मंदिर, पर्यटन स्थल एवं विरासत से संबंधित अध्ययन सामग्री।</p>
+        </div>
+
+        <div class="card subject">
+            <h3>📰 Current Affairs</h3>
+            <p>दैनिक समसामयिकी एवं परीक्षा उपयोगी प्रश्न।</p>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title" id="pdfs">
+        📚 PDF Study Material
+    </h2>
+
+    <div class="grid">
+
+        <!-- 1 -->
+        <div class="card pdf-card">
+            <h3>🏰 Rajasthan History</h3>
+            <p>राजस्थान इतिहास की अध्ययन सामग्री।</p>
+
+            <a
+                class="pdf-btn"
+                href="RAJ%20HISTORY%20.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 2 -->
+        <div class="card pdf-card">
+            <h3>💰 Rajasthan Economic Survey</h3>
+            <p>राजस्थान आर्थिक सर्वेक्षण की PDF।</p>
+
+            <a
+                class="pdf-btn"
+                href="Rajasthan%20Economic%20Survey.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 3 -->
+        <div class="card pdf-card">
+            <h3>📰 Daily Current Affairs Quiz</h3>
+            <p>29 सितम्बर 2026 — Hindi Current Affairs Quiz.</p>
+
+            <a
+                class="pdf-btn"
+                href="Daily%20Current%20Affairs%20Quiz%2029%20Sept.%202026%20-%20Hindi.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="card pdf-card">
+            <h3>📕 JADUII BOOK</h3>
+            <p>Rajasthan Culture Demo PDF.</p>
+
+            <a
+                class="pdf-btn"
+                href="JADUII%20BOOK%20%3D%20RAJASTHAN%20CULTURE%20DEMO.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 5 -->
+        <div class="card pdf-card">
+            <h3>🌊 राजस्थान की जल स्थापत्य कला</h3>
+            <p>राजस्थान की जल स्थापत्य कला से संबंधित नोट्स।</p>
+
+            <a
+                class="pdf-btn"
+                href="राजस्थान%20की%20जल%20स्थापत्य%20कला.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 6 -->
+        <div class="card pdf-card">
+            <h3>🛕 राजस्थान के प्रमुख मंदिर</h3>
+            <p>राजस्थान के प्रमुख मंदिरों से संबंधित अध्ययन सामग्री।</p>
+
+            <a
+                class="pdf-btn"
+                href="राजस्थान%20के%20प्रमुख%20मंदिर.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+
+        <!-- 7 -->
+        <div class="card pdf-card">
+            <h3>🏺 राजस्थान सभ्यताएँ</h3>
+            <p>चित्रों वाले राजस्थान सभ्यताओं के नोट्स।</p>
+
+            <a
+                class="pdf-btn"
+                href="राजस्थान_सभ्यताएँ_चित्रों_वाले_नोट्स_🫡.pdf"
+                target="_blank"
+                rel="noopener"
+            >
+                📖 PDF खोलें
+            </a>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title" id="mcq">
+        📝 RPSC MCQ Practice
+    </h2>
+
+    <div class="mcq">
+        <h3>प्रश्न 1. राजस्थान की प्राचीन सभ्यताओं में कालीबंगा किस जिले में स्थित है?</h3>
+        <p>A. जयपुर</p>
+        <p>B. हनुमानगढ़</p>
+        <p>C. उदयपुर</p>
+        <p>D. अजमेर</p>
+        <p class="answer">उत्तर: B. हनुमानगढ़</p>
+    </div>
+
+    <div class="mcq">
+        <h3>प्रश्न 2. राजस्थान की अर्थव्यवस्था से संबंधित जानकारी के लिए कौन-सा दस्तावेज महत्वपूर्ण है?</h3>
+        <p>A. आर्थिक सर्वेक्षण</p>
+        <p>B. केवल जनगणना</p>
+        <p>C. केवल मानचित्र</p>
+        <p>D. केवल इतिहास ग्रंथ</p>
+        <p class="answer">उत्तर: A. आर्थिक सर्वेक्षण</p>
+    </div>
+
+    <div class="mcq">
+        <h3>प्रश्न 3. राजस्थान के मंदिरों एवं स्थापत्य से संबंधित सामग्री किस PDF में मिलेगी?</h3>
+        <p>A. Daily Current Affairs</p>
+        <p>B. Rajasthan Economic Survey</p>
+        <p>C. राजस्थान के प्रमुख मंदिर</p>
+        <p>D. केवल MCQ</p>
+        <p class="answer">उत्तर: C. राजस्थान के प्रमुख मंदिर</p>
+    </div>
+
+
+    <p class="no-result" id="noResult">
+        ❌ कोई सामग्री नहीं मिली।
+    </p>
+
 </div>
 
-<main class="container">
-
-<h2 class="section-title" id="subjects">📚 Study Subjects</h2>
-
-<div class="grid">
-
-  <div class="card">
-    <div class="icon">🏰</div>
-    <h3>Rajasthan History</h3>
-    <p>
-      राजस्थान की प्राचीन सभ्यताएँ, इतिहास एवं महत्वपूर्ण तथ्य।
-    </p>
-    <a class="btn" href="#notes">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">💰</div>
-    <h3>Rajasthan Economy</h3>
-    <p>
-      राजस्थान की अर्थव्यवस्था, कृषि, उद्योग, सेवाएँ और महत्वपूर्ण आँकड़े।
-    </p>
-    <a class="btn" href="#notes">Open Notes</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📰</div>
-    <h3>Current Affairs</h3>
-    <p>
-      Daily Current Affairs और परीक्षा उपयोगी समसामयिक घटनाएँ।
-    </p>
-    <a class="btn" href="#current">View Current Affairs</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🏛️</div>
-    <h3>Rajasthan Heritage</h3>
-    <p>
-      राजस्थान की कला, संस्कृति, स्थापत्य, मंदिर और विरासत।
-    </p>
-    <a class="btn" href="#notes">View Material</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🌊</div>
-    <h3>जल स्थापत्य कला</h3>
-    <p>
-      राजस्थान की जल संरचनाएँ एवं जल स्थापत्य से संबंधित अध्ययन सामग्री।
-    </p>
-    <a class="btn" href="#notes">View Notes</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🛕</div>
-    <h3>प्रमुख मंदिर</h3>
-    <p>
-      राजस्थान के प्रमुख मंदिरों और धार्मिक विरासत से संबंधित सामग्री।
-    </p>
-    <a class="btn" href="#notes">View Notes</a>
-  </div>
-
-</div>
-
-
-<h2 class="section-title" id="current">
-  📰 Latest Current Affairs
-</h2>
-
-<div class="latest">
-
-  <div class="latest-item">
-    <strong>Daily Current Affairs Quiz</strong>
-    <p>29 September 2026 — Hindi Quiz</p>
-  </div>
-
-  <div class="latest-item">
-    <strong>RPSC Current Affairs</strong>
-    <p>परीक्षा उपयोगी राष्ट्रीय एवं अंतरराष्ट्रीय घटनाएँ</p>
-  </div>
-
-  <div class="latest-item">
-    <strong>Daily MCQ Practice</strong>
-    <p>Current Affairs आधारित प्रश्नों का अभ्यास</p>
-  </div>
-
-</div>
-
-
-<h2 class="section-title" id="notes">
-  📖 Handwritten Notes
-</h2>
-
-<div class="grid">
-
-  <div class="card">
-    <div class="icon">📕</div>
-    <h3>Rajasthan History PDF</h3>
-    <p>
-      राजस्थान इतिहास एवं प्राचीन सभ्यताओं की अध्ययन सामग्री।
-    </p>
-    <a class="btn" href="RAJ%20HISTORY%20.pdf" target="_blank">
-  
-Open PDF
-</a>
-     
-  </div>
-
-  <div class="card">
-    <div class="icon">📗</div>
-    <h3>Rajasthan Economic Survey</h3>
-    <p>
-      राजस्थान अर्थव्यवस्था एवं Economic Survey आधारित सामग्री।
-    </p>
-     <a class="btn" href="Rajasthan%20Economic%20Survey.pdf" target="_blank">Open PDF
-</a>
-     
-  </div>
-
-  <div class="card">
-    <div class="icon">📘</div>
-    <h3>Current Affairs Quiz</h3>
-    <p>
-      29 September 2026 Daily Current Affairs Quiz.
-    </p>
-    <a class="btn" href="Daily%20Current%20Affairs%20Quiz%2029%20Sept.%202026%20-%20Hindi.pdf" target="_blank">Open PDF
-
-</a>
-      
-
-  <div class="card">
-    <div class="icon">📙</div>
-    <h3>Rajasthan Heritage</h3>
-    <p>
-      जल स्थापत्य कला एवं प्रमुख मंदिरों की सामग्री।
-    </p>
-    
-<a class="btn" href="राजस्थान%20की%20जल%20स्थापत्य%20कला.pdf" target="_blank">Open PDF</a>
-</div>
-
-
-<h2 class="section-title" id="mcq">
-  📝 RPSC MCQ Practice
-</h2>
-
-<div class="latest"> 
-
-  <div class="latest-item">
-    <strong>🎯 Rajasthan History MCQ</strong>
-    <p>प्राचीन सभ्यताओं एवं राजस्थान इतिहास पर आधारित प्रश्न।</p><a class="btn" href="राजस्थान_सभ्यताएँ_चित्रों_वाले_नोट्स_🫡.pdf" target="_blank">Open PDF</a>
-  </div>
-
-  <div class="latest-item">
-    <strong>💰 Rajasthan Economy MCQ</strong>
-    <p>अर्थव्यवस्था और Economic Survey आधारित अभ्यास।</p>
-  </div>
-
-  <div class="latest-item">
-    <strong>📰 Current Affairs MCQ</strong>
-    <p>Daily Current Affairs से जुड़े परीक्षा उपयोगी प्रश्न।</p>
-  </div>
-
-</div>
-
-</main>
 
 <footer>
-  <p><strong>Rajasthan GK | RPSC Exam Trend 2026-27</strong></p>
-  <p>📚 Study • 📝 Practice • 🎯 Prepare</p>
-  <p>© KK Success Tips</p>
+    <h3>KK Success Tips</h3>
+    <p>Rajasthan GK | RPSC Exam Trend 2026-27</p>
+    <p>📚 Study • Practice • Revision</p>
 </footer>
 
 
 <script>
-function searchCards(){
+function searchContent(){
 
-  let input = document
-    .getElementById("searchBox")
-    .value
-    .toLowerCase();
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
 
-  let cards = document.querySelectorAll(".card");
+    let cards =
+        document.querySelectorAll(".card");
 
-  cards.forEach(function(card){
+    let found = 0;
 
-    let text = card.innerText.toLowerCase();
+    cards.forEach(function(card){
 
-    if(text.includes(input)){
-      card.style.display = "";
-    }else{
-      card.style.display = "none";
+        let text =
+            card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+            card.style.display = "";
+            found++;
+        }else{
+            card.style.display = "none";
+        }
+
+    });
+
+    if(input === ""){
+        cards.forEach(function(card){
+            card.style.display = "";
+        });
+        found = cards.length;
     }
 
-  });
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
 }
 </script>
 
 </body>
-</html>card.style.display
+</html>
